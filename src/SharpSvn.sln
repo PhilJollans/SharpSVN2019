@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B7ADE12F-386A-4809-AB93-023E49AF3C7B}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,16 +23,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contrib", "Contrib", "{CAD0
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSvn.UI", "SharpSvn.UI\SharpSvn.UI.csproj", "{E929A4D4-6C65-4D00-9432-E082169BDDC3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC} = {6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SharpSvn", "SharpSvn\SharpSvn.vcxproj", "{6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC}"
 	ProjectSection(ProjectDependencies) = postProject
-		{0CC79A1A-463D-40BB-91E0-3B1391B519C6} = {0CC79A1A-463D-40BB-91E0-3B1391B519C6}
-		{80CA13E9-790A-4DC3-A45A-EDF6996D82D0} = {80CA13E9-790A-4DC3-A45A-EDF6996D82D0}
+		{F47E6F0F-0639-45AE-B029-7EDD8CD5910A} = {F47E6F0F-0639-45AE-B029-7EDD8CD5910A}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSvn.Tests", "SharpSvn.Tests\SharpSvn.Tests.csproj", "{6D9F8C0B-E3DA-4FB6-BBF9-FB57791B469D}"
 	ProjectSection(ProjectDependencies) = postProject
+		{6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC} = {6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC}
+		{691CBC4F-CC38-4342-8738-A08E48812141} = {691CBC4F-CC38-4342-8738-A08E48812141}
 		{3A1D7085-4B6A-4D47-9FA6-B2A63CDD6595} = {3A1D7085-4B6A-4D47-9FA6-B2A63CDD6595}
+		{E929A4D4-6C65-4D00-9432-E082169BDDC3} = {E929A4D4-6C65-4D00-9432-E082169BDDC3}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SharpPlink", "SharpPlink\SharpPlink.vcxproj", "{F47E6F0F-0639-45AE-B029-7EDD8CD5910A}"
@@ -54,18 +59,26 @@ EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "SharpSvn.Docs", "SharpSvn.Docs\SharpSvn.Docs.shfbproj", "{FEC53C23-3A30-4346-9EB1-45F4F95FD47B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSvn.TestBuilder", "SharpSvn.TestBuilder\SharpSvn.TestBuilder.csproj", "{691CBC4F-CC38-4342-8738-A08E48812141}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC} = {6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSvn.PdbAnnotate", "SharpSvn.PdbAnnotate\SharpSvn.PdbAnnotate.csproj", "{3645E16F-6B5A-43D7-A81D-77E681E9A636}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC} = {6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSvn.MSBuild.VSIX", "SharpSvn.MSBuild.VSIX\SharpSvn.MSBuild.VSIX.csproj", "{41C94DFB-3004-4524-9869-69C30931BE4E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC} = {6DD8A600-5A7E-4B7A-91EE-86AB78F58AAC}
+		{FEEDF00D-BC63-4FDF-84D4-6194228C9101} = {FEEDF00D-BC63-4FDF-84D4-6194228C9101}
+		{F1ED9F1C-BC63-4FDF-84D4-6194228C9101} = {F1ED9F1C-BC63-4FDF-84D4-6194228C9101}
+		{3645E16F-6B5A-43D7-A81D-77E681E9A636} = {3645E16F-6B5A-43D7-A81D-77E681E9A636}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSvn.MSBuild.Inc", "SharpSvn.MSBuild\SharpSvn.MSBuild.Inc.csproj", "{FEEDF00D-BC63-4FDF-84D4-6194228C9101}"
 EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
@@ -195,6 +208,13 @@ Global
 		{3645E16F-6B5A-43D7-A81D-77E681E9A636} = {27C2F39C-9D4A-41CC-8CE7-5B649A8D7036}
 		{41C94DFB-3004-4524-9869-69C30931BE4E} = {27C2F39C-9D4A-41CC-8CE7-5B649A8D7036}
 		{FEEDF00D-BC63-4FDF-84D4-6194228C9101} = {27C2F39C-9D4A-41CC-8CE7-5B649A8D7036}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4729B2FE-B47E-435E-91AD-FAD0806962CD}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN2019 - Subversion Support for Visual Studio
 	EndGlobalSection
 	GlobalSection(TextTemplating) = postSolution
 		TextTemplating = 1
