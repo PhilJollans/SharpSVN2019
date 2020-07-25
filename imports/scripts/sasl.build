@@ -26,9 +26,9 @@
       <FilterFile file="${saslDir}/win32/include/config.h">
         <filterchain>
           <replacestring from='/* which mechs can we link staticly? */' to='#define STATIC_NTLM 1 /* Which mechs can we link staticly?  */ ' />
-          <replacestring from='#define STATIC_OTP 1' to='/* #undef STATIC_OTP */' />
-          <replacestring from='#define STATIC_SRP 1' to='/* #undef STATIC_SRP */' />
-          <replacestring from='#define STATIC_GSSAPIV2 1' to='/* #undef STATIC_GSSAPIV2 */' />
+          <!-- <replacestring from='#define STATIC_OTP 1' to='/* #undef STATIC_OTP */' /> -->
+          <!-- <replacestring from='#define STATIC_SRP 1' to='/* #undef STATIC_SRP */' /> -->
+          <!-- <replacestring from='#define STATIC_GSSAPIV2 1' to='/* #undef STATIC_GSSAPIV2 */' /> -->
           <replacestring from='typedef int ssize_t;' to='typedef INT_PTR ssize_t;' />
           <LineRegexReplace re='(#define snprintf .*)'
                          to='#if _MSC_VER &lt; 1900
@@ -44,6 +44,8 @@ $1
 #include &lt;winsock2.h&gt;
 #include &lt;Ws2tcpip.h&gt;
 #include &lt;wspiapi.h&gt;
+//#define GCC_FALLTHROUGH [[fallthrough]]; 
+#define GCC_FALLTHROUGH __attribute__ ((fallthrough)); 
 /* /SharpSvn */
 
 ' file="${saslDir}/win32/include/config.h" append="true" />
@@ -100,6 +102,13 @@ $1
           <replacestring from='libsasl.dll' to='libsasl.lib' if="${static}" />
         </filterchain>
       </FilterFile>
+      
+      <FilterFile file="${saslDir}/plugins/ntlm.c">
+        <filterchain>
+          <replacestring from='"crypto-compat.h"' to='"..\common\crypto-compat.h"' />
+        </filterchain>
+      </FilterFile>
+      
     </OnceBlock>
   </target>
   <target name="sasl-build" depends="sasl-prepare">
