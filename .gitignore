@@ -29,6 +29,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+imports/downloads/
+imports/build/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -351,3 +353,5 @@ MigrationBackup/
 /src/Ankh.VS2019Package
 /src/autolib
 *.bak
+/src/SharpSvn/SvnWindowsError.h
+Building SharpSVN.txt
