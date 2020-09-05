@@ -12,7 +12,7 @@ namespace Errors2Enum
         {
             if (args.Length != 7)
             {
-                Console.Error.WriteLine("Usage: Errors2Enum <VCPath> <SDKPath> <UniversalSDKDir> <apr_errno.h> <serf.h> <libssh2.h> <outputfile>");
+                Console.Error.WriteLine("Usage: Errors2Enum <VCPath> <SDKIncludePaths> <UniversalSDKDir> <apr_errno.h> <serf.h> <libssh2.h> <outputfile>");
                 foreach (string s in args)
                 {
                     Console.Error.WriteLine("'" + s + "'");
@@ -22,9 +22,7 @@ namespace Errors2Enum
             }
 
             string vcPath = Path.GetFullPath(args[0]);
-            string sdkPath = Path.GetFullPath(args[1]);
             string usdkPath = string.IsNullOrEmpty(args[2].Trim()) ? "C:\\" : Path.GetFullPath(args[2].Split(new char[] { ';' }, 2)[0]);
-            string winerror = Path.Combine(sdkPath, "include\\winerror.h");
             string errno = Path.Combine(vcPath, "include\\errno.h");
             string altErrNo = Path.Combine(usdkPath, "errno.h");
             if (!File.Exists(errno) && File.Exists(altErrNo))
@@ -34,18 +32,31 @@ namespace Errors2Enum
             string libssh2h = Path.GetFullPath(args[5]);
             string to = Path.GetFullPath(args[6]);
 
-            if (!File.Exists(winerror))
-                winerror = Path.Combine(Path.Combine(Path.GetDirectoryName(winerror), "shared"), "winerror.h");
+            // Phil Jollans
+            // I not expect the macro $(WindowsSDK_IncludePath) to be passed as the second paraemter.
+            // This is a list of paths separated by semi colon.
+            string  WindowsSDK_IncludePath = args[1] ;
+            var     incDirs                = WindowsSDK_IncludePath.Split ( ';' ) ;
+            string  winerror               = null ;
+            bool    weFound                = false ;
 
-            if (!File.Exists(winerror))
+            foreach ( var incDir in incDirs )
             {
-                if (!File.Exists(winerror))
-                {
-                    Console.Error.WriteLine("'{0}' does not exist", winerror);
-                    Environment.ExitCode = 1;
-                    return;
-                }
+              winerror = Path.Combine ( incDir, "winerror.h" ) ;
+              if ( File.Exists ( winerror ) )
+              {
+                weFound = true ;
+                break ;
+              }
             }
+
+            if ( !weFound )
+            {
+              Console.Error.WriteLine ( "winerror.h not found in SDK include path" ) ;
+              Environment.ExitCode = 1;
+              return;
+            }
+
 
             if (!File.Exists(errno))
             {
