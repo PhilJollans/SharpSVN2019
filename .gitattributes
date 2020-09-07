@@ -1,0 +1,2 @@
+# .repos files are SVN repository dumps
+*.repos text eol=lf
