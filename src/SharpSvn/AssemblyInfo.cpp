@@ -93,7 +93,10 @@ using SharpSvn::Implementation::SvnLibraryAttribute;
 [assembly:SvnLibrary("Cyrus Sasl", SASL_VERSION)];
 [assembly:SvnLibrary("eXpat", EXPAT_VERSION)];
 [assembly:SvnLibrary("LibSSH2", LIBSSH2_VERSION)]
-[assembly:SvnLibrary("LZ4", LZ4_VERSION)]
+// Phil: So far as I can tell, we are not (yet) using an LZ4 library.
+// This statement causes an error in the unit test "TestLibs" in
+// \SharpSVN2019\src\SharpSvn.Tests\SvnToolsTests.cs
+//[assembly:SvnLibrary("LZ4", LZ4_VERSION)]
 [assembly:SvnLibrary("Serf", SERF_VERSION)];
 [assembly:SvnLibrary("SQLite", SQLITE_VERSION)];
 [assembly:SvnLibrary("Utf8proc", UTF8PROC_VERSION)];
