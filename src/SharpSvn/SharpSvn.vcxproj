@@ -290,6 +290,7 @@ $(SolutionDir)tools\Errors2Enum\bin\$(Configuration)\Errors2Enum.exe "$(VCInstal
     <ClInclude Include="ReposArgs\PackRepository.h" />
     <ClInclude Include="ReposArgs\VerifyRepository.h" />
     <ClInclude Include="ReposEventArgs\SvnRepositoryNotifyEventArgs.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SharpSvnStrings.h" />
     <ClInclude Include="EventArgs\SvnEventArgs.h" />
     <ClInclude Include="SvnMultiCommandClient.h" />
@@ -702,6 +703,9 @@ $(SolutionDir)tools\Errors2Enum\bin\$(Configuration)\Errors2Enum.exe "$(VCInstal
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SharpSvn.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

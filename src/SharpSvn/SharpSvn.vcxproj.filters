@@ -665,6 +665,9 @@
     <ClInclude Include="LookArgs\SvnLookLockArgs.h">
       <Filter>SvnLookClient\Args</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SharpSvnStrings.resx">
@@ -1142,5 +1145,10 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="SharpSvnStrings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SharpSvn.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
