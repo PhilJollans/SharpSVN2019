@@ -130,4 +130,4 @@ using SharpSvn::Implementation::SvnLibraryAttribute;
 
 #include "../../imports/release/include/sharpsvn-imports.h"
 #pragma comment(lib, "libssh2.lib")
-[assembly:AssemblyVersionAttribute("1.12999.*")];
+[assembly:AssemblyVersionAttribute("1.12.0.0000")];

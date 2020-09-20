@@ -61,8 +61,8 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,12,0,0
- PRODUCTVERSION 1,12,0,0
+ FILEVERSION 1,12,0,0000
+ PRODUCTVERSION 1,12,0,0000
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -79,12 +79,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "SharpSvn Project"
             VALUE "FileDescription", "SharpSvn 1.12 is a binding of the Subversion Client API for .NET based on Subversion 1.12"
-            VALUE "FileVersion", "1.12.0.0"
+            VALUE "FileVersion", "1.12.0.0000"
             VALUE "InternalName", "SharpSvn.dll"
             VALUE "LegalCopyright", "(C) Copyright 2006-2020 The SharpSvn Project"
             VALUE "OriginalFilename", "SharpSvn.dll"
             VALUE "ProductName", "SharpSvn"
-            VALUE "ProductVersion", "1.12.0.0"
+            VALUE "ProductVersion", "1.12.0.0000"
         END
     END
     BLOCK "VarFileInfo"

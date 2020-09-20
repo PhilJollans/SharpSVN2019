@@ -3,7 +3,7 @@
   <metadata>
     <id>SharpSvn2019.SharpSvn</id>
     <title>SharpSvn2019.SharpSvn</title>    
-    <version>$version$</version>
+    <version>1.12.0.0000</version>
     <authors>SharpSvn Project</authors>
     <owners>SharpSvn Project</owners>
     <license type="expression">APSL-2.0</license>
@@ -21,15 +21,15 @@
   </metadata>
   <files>
     <!-- DotNet 4.0+ version -->
-    <file src="../../SharpSvn/bin/Win32/Release/SharpSvn.dll" target="lib/net40" />
-    <file src="../../SharpSvn/bin/win32/Release/SharpSvn.xml" target="lib/net40" />
-    <file src="../../SharpSvn/bin/win32/Release/SharpSvn.pdb" target="lib/net40" />
-    <file src="../../../imports/build/db-4.4.20.NC/build_win32/Release/SharpSvn-DB44-20-win32.svnDll" target="lib/net40" />
-    <file src="../../SharpSvn/bin/win32/Release/SharpPlink-Win32.svnExe" target="lib/net40" />
-    <file src="../../SharpSvn/bin/win32/Release/SharpPlink-Win32.pdb" target="lib/net40" />
-    <file src="../../SharpSvn.UI/bin/x86/Release/SharpSvn.UI.dll" target="lib/net40" />
-    <file src="../../SharpSvn.UI/bin/x86/Release/SharpSvn.UI.xml" target="lib/net40" />
-    <file src="../../SharpSvn.UI/bin/x86/Release/SharpSvn.UI.pdb" target="lib/net40" />
-    <file src="../SharpSvn_Logo_128.png" target="images\" />
+    <file src="../SharpSvn/bin/Win32/Release/SharpSvn.dll" target="lib/net40" />
+    <file src="../SharpSvn/bin/win32/Release/SharpSvn.xml" target="lib/net40" />
+    <file src="../SharpSvn/bin/win32/Release/SharpSvn.pdb" target="lib/net40" />
+    <file src="../../imports/build/db-4.4.20.NC/build_win32/Release/SharpSvn-DB44-20-win32.svnDll" target="lib/net40" />
+    <file src="../SharpSvn/bin/win32/Release/SharpPlink-Win32.svnExe" target="lib/net40" />
+    <file src="../SharpSvn/bin/win32/Release/SharpPlink-Win32.pdb" target="lib/net40" />
+    <file src="../SharpSvn.UI/bin/x86/Release/SharpSvn.UI.dll" target="lib/net40" />
+    <file src="../SharpSvn.UI/bin/x86/Release/SharpSvn.UI.xml" target="lib/net40" />
+    <file src="../SharpSvn.UI/bin/x86/Release/SharpSvn.UI.pdb" target="lib/net40" />
+    <file src="SharpSvn_Logo_128.png" target="images\" />
   </files>
 </package>
