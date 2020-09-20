@@ -175,23 +175,28 @@ RootDir = fso.GetParentFolderName(WScript.ScriptFullName)
 '-------------------------------------------------------------------------------
 'Create the output directory
 '-------------------------------------------------------------------------------
-OutputDirectory = BaseOutputDirectory & "\1_12_" & Build_Version
-if Not fso.FolderExists ( OutputDirectory ) Then
-  fso.CreateFolder OutputDirectory 
-End If
+'OutputDirectory = BaseOutputDirectory & "\1_12_" & Build_Version
+'if Not fso.FolderExists ( OutputDirectory ) Then
+''  fso.CreateFolder OutputDirectory 
+'End If
+
+'Since nuget puts a version number in the package file name, it is convenient
+'to build each new version into the same directory (which we can define as
+'a package source in Visual Studio).
+OutputDirectory = BaseOutputDirectory
 
 'Patch the assembly config files
 PatchAssemblyFileVersion_cpp "src\SharpSvn\AssemblyInfo.cpp", Assembly_Version
 PatchRcFileVersion "src\SharpSvn\SharpSvn.rc", Assembly_Version
 
 'Pathc the nuget version
-PatchNuspecVersion "src\nuget\SharpSvn.1.9-x86.nuspec", Assembly_Version
+PatchNuspecVersion "src\nuget\SharpSvn2019.nuspec", Assembly_Version
 
 'Compile the projects
 BuildSolution "src\SharpSvn.sln" 
 
 'Generate the nuget package in the output directory
-GenerateNuget "src\nuget\SharpSvn.1.9-x86.nuspec" 
+GenerateNuget "src\nuget\SharpSvn2019.nuspec" 
 
 MsgBox "Done"
  
