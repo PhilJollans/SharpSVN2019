@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>SharpSvn.1.9-x86</id>
-    <title>SharpSvn 1.9-x86</title>    
+    <id>SharpSvn2019.SharpSvn</id>
+    <title>SharpSvn2019.SharpSvn</title>    
     <version>$version$</version>
     <authors>SharpSvn Project</authors>
     <owners>SharpSvn Project</owners>
@@ -11,9 +11,9 @@
     <iconUrl>http://sharpsvn.open.collab.net/favicon.ico</iconUrl>
     <icon>images\SharpSvn_Logo_128.png</icon>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>SharpSvn 1.9 is a binding of the Subversion Client API for .NET based on Subversion 1.9.x. </description>
-    <copyright>(C) Copyright 2006-2015 The SharpSvn Project</copyright>
-    <tags>Subversion Svn SharpSvn</tags>
+    <description>SharpSvn 1.12 is a binding of the Subversion Client API for .NET based on Subversion 1.12  </description>
+    <copyright>(C) Copyright 2006-2020 The SharpSvn Project</copyright>
+    <tags>Subversion Svn SharpSvn SharpSvn2019</tags>
     <dependencies>
       <group targetFramework="net40">
       </group>
