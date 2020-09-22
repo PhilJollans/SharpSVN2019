@@ -3,16 +3,18 @@
   <metadata>
     <id>SharpSvn2019.SharpSvn</id>
     <title>SharpSvn2019.SharpSvn</title>    
-    <version>1.12.0.0000</version>
+    <version>1.12.0.0001</version>
     <authors>SharpSvn Project</authors>
     <owners>SharpSvn Project</owners>
     <license type="expression">APSL-2.0</license>
-    <projectUrl>http://sharpsvn.net/</projectUrl>
-    <iconUrl>http://sharpsvn.open.collab.net/favicon.ico</iconUrl>
+    <projectUrl>https://github.com/PhilJollans/SharpSVN2019</projectUrl>
     <icon>images\SharpSvn_Logo_128.png</icon>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>SharpSvn 1.12 is a binding of the Subversion Client API for .NET based on Subversion 1.12  </summary>
     <description>SharpSvn 1.12 is a binding of the Subversion Client API for .NET based on Subversion 1.12  </description>
+    <releaseNotes>First version of SharpSVN2019, based on a fork of the CollabNet project, with no substantial changes.</releaseNotes>
     <copyright>(C) Copyright 2006-2020 The SharpSvn Project</copyright>
+    <repository type="git" url="https://github.com/PhilJollans/SharpSVN2019" branch="master"/>
     <tags>Subversion Svn SharpSvn SharpSvn2019</tags>
     <dependencies>
       <group targetFramework="net40">
@@ -23,13 +25,15 @@
     <!-- DotNet 4.0+ version -->
     <file src="../SharpSvn/bin/Win32/Release/SharpSvn.dll" target="lib/net40" />
     <file src="../SharpSvn/bin/win32/Release/SharpSvn.xml" target="lib/net40" />
-    <file src="../SharpSvn/bin/win32/Release/SharpSvn.pdb" target="lib/net40" />
     <file src="../../imports/build/db-4.4.20.NC/build_win32/Release/SharpSvn-DB44-20-win32.svnDll" target="lib/net40" />
     <file src="../SharpSvn/bin/win32/Release/SharpPlink-Win32.svnExe" target="lib/net40" />
-    <file src="../SharpSvn/bin/win32/Release/SharpPlink-Win32.pdb" target="lib/net40" />
     <file src="../SharpSvn.UI/bin/x86/Release/SharpSvn.UI.dll" target="lib/net40" />
     <file src="../SharpSvn.UI/bin/x86/Release/SharpSvn.UI.xml" target="lib/net40" />
+    <!-- The PDB files blow up the size of the nuget package and also of the AnkhSVN VSIX package.
+    <file src="../SharpSvn/bin/win32/Release/SharpSvn.pdb" target="lib/net40" />
+    <file src="../SharpSvn/bin/win32/Release/SharpPlink-Win32.pdb" target="lib/net40" />
     <file src="../SharpSvn.UI/bin/x86/Release/SharpSvn.UI.pdb" target="lib/net40" />
+    -->
     <file src="SharpSvn_Logo_128.png" target="images\" />
   </files>
 </package>
