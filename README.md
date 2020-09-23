@@ -9,3 +9,5 @@ It is my intention to create a version which compiles using Visual Studio 2019, 
 
 Version 1.12.0.1 is now available as a nuget package at  
 https://www.nuget.org/packages/SharpSvn2019.SharpSvn/
+
+This version is built against SVN version 1.12.
